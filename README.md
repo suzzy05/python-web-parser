@@ -1,33 +1,48 @@
-# Webpage Extractor
+# Webpage Tools (Extractor + Simhash)
 
 ## Description
-This Python program extracts:
-- Webpage title
-- Full webpage text
-- All links from the webpage
+
+This repository contains two Python programs:
+
+1. webpage_extractor.py  
+   - Takes one URL  
+   - Prints webpage title  
+   - Prints full text  
+   - Prints all links  
+
+2. simhash_compare.py  
+   - Takes two URLs  
+   - Counts word frequency  
+   - Computes 64-bit Simhash  
+   - Prints number of common bits  
+
+---
 
 ## Requirements
-Install the required libraries:
 
-pip install requests
-pip install beautifulsoup4
+pip install requests  
+pip install beautifulsoup4  
+
+---
 
 ## How to Run
 
-Open Command Prompt and run:
+For Webpage Extractor:
 
 python webpage_extractor.py https://example.com
 
-Example:
+For Simhash Comparison:
 
-python webpage_extractor.py https://www.google.com
+python simhash_compare.py https://www.google.com https://www.wikipedia.org
+
+---
 
 ## Output
-The program will print:
-- Title of the webpage
-- Text content of the page
-- All links present on the page
 
-## Note
-If no URL is provided, the program will display:
-Enter URL
+Extractor:
+- Title
+- Page text
+- Links
+
+Simhash:
+- Number of common bits (out of 64)
