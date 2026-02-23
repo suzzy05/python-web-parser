@@ -2,13 +2,9 @@ import sys
 import requests
 from bs4 import BeautifulSoup
 
-if len(sys.argv) < 2:
-    print("Enter URL")
-    sys.exit()
-
-url = sys.argv[1]
-
 try:
+    url = sys.argv[1]
+
     response = requests.get(url)
     soup = BeautifulSoup(response.text, "html.parser")
 
@@ -17,16 +13,13 @@ try:
         print(soup.title.string)
 
     # Print body text
-    text = soup.get_text()
-    print(text)
+    print(soup.get_text())
 
     # Print all links
-    links = soup.find_all("a")
-
-    for link in links:
+    for link in soup.find_all("a"):
         href = link.get("href")
         if href:
             print(href)
 
 except:
-    print("Error while fetching page")
+    print("Enter URL or Error while fetching page")
