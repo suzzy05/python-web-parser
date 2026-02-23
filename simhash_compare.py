@@ -22,7 +22,7 @@ def simhash(text):
         if clean != "":
             words.append(clean)
 
-    # manual frequency count
+    
     freq = {}
     for w in words:
         if w in freq:
@@ -62,3 +62,4 @@ print("Simhash of URL2:", h2)
 
 similarity = 64 - bin(h1 ^ h2).count("1")
 print("Similarity (out of 64):", similarity)
+
