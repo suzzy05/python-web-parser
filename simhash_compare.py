@@ -22,6 +22,7 @@ def simhash(text):
         if clean != "":
             words.append(clean)
 
+    # manual frequency count
     freq = {}
     for w in words:
         if w in freq:
@@ -55,5 +56,9 @@ text2 = BeautifulSoup(requests.get(url2).text, "html.parser").get_text()
 h1 = simhash(text1)
 h2 = simhash(text2)
 
+print("Simhash of URL1:", h1)
+print("Simhash of URL2:", h2)
 
-print(64 - bin(h1 ^ h2).count("1"))
+
+similarity = 64 - bin(h1 ^ h2).count("1")
+print("Similarity (out of 64):", similarity)
