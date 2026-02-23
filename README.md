@@ -1,48 +1,33 @@
-# Python Web Page Extractor
+# Webpage Extractor
 
 ## Description
-This project is a simple Python program that takes a URL, fetches the web page, and prints:
-
-- Page Title
-- Page Body Text (without HTML tags)
-- All URLs present in the page
-
-It uses the `requests` library to fetch the webpage and `BeautifulSoup` to parse HTML content.
-
----
+This Python program extracts:
+- Webpage title
+- Full webpage text
+- All links from the webpage
 
 ## Requirements
-
-Make sure Python is installed.
-
-Install required libraries:
+Install the required libraries:
 
 pip install requests
 pip install beautifulsoup4
 
----
-
 ## How to Run
 
-Open terminal in project folder and run:
+Open Command Prompt and run:
 
-python script.py
+python webpage_extractor.py https://example.com
 
-(Currently the URL is hardcoded inside the script.)
+Example:
 
-You can change the URL inside the file:
-url = "https://www.google.com"
-
----
+python webpage_extractor.py https://www.google.com
 
 ## Output
+The program will print:
+- Title of the webpage
+- Text content of the page
+- All links present on the page
 
-The program prints:
-
-1. Title of the webpage
-2. Complete text content of the webpage
-3. All links (href values) found inside `<a>` tags
-
----
-
-## Shilpi Shaw
+## Note
+If no URL is provided, the program will display:
+Enter URL
